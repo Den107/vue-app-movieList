@@ -3,7 +3,11 @@
     <h3 class="list-title">{{ listTitle }}</h3>
     <BRow>
       <template v-if="isExist">
-        <BCol cols="3" v-for="(movie, key) in list" :key="key">
+        <BCol
+          class="col-xs-12 col-sm-3"
+          v-for="(movie, key) in list"
+          :key="key"
+        >
           <MovieItem
             :movie="movie"
             @mouseover.native="onMouseOver(movie.Poster)"
